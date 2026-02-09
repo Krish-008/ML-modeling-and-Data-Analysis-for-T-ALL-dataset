@@ -57,7 +57,7 @@ export const pipelineSteps = [
         date: "Step 4",
     },
     {
-        title: "Final Model",
+        title: "Final Workflow",
         description: "Reciprocal Switch mechanism proposal.",
         date: "Step 5",
     },

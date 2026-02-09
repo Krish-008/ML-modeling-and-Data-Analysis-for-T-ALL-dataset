@@ -1,5 +1,5 @@
 import { keyFindings } from "@/lib/data";
-import { ArrowRight, Download, Shield, Lock, Zap } from "lucide-react";
+import { ArrowRight, Download, Shield, Lock, Zap, FileText, BookOpen } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -14,17 +14,18 @@ export default function Home() {
     <div className="flex flex-col gap-16 py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       {/* Hero Section */}
       <section className="text-center space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-700">
-        <div className="inline-block p-1 px-3 rounded-full bg-emerald-100 text-emerald-800 text-sm font-semibold tracking-wide mb-4">
-          Publications 2024
-        </div>
+
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-slate-900 dark:text-white max-w-4xl mx-auto leading-tight">
           The Granule-ECM Axis in T-ALL: <br />
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-emerald-600 to-teal-500">
-            MIR21-Mediated Niche Remodeling
+            MIR21-Mediated Niche
           </span>
         </h1>
         <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
-          Uncovering how T-ALL cells construct a protective collagen fortress while simultaneously shutting down immune-guard enzymes via a master epigenetic switch.
+          I recently completed a bioinformatics research project on T-cell acute lymphoblastic leukemia (T-ALL), using Python to analyze differential gene expression data.
+          In this work, I identified significantly dysregulated genes and showed strong enrichment in collagen-containing extracellular matrix and granule-related pathways.
+          I also derived ECM and granule gene signatures, computed hub genes, and visualized their patterns using clustered heatmaps and other EDA plots.
+          This project strengthened my skills in statistical genomics, pathway enrichment, and building interpretable, biology-driven analytical pipelines.
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
@@ -35,10 +36,25 @@ export default function Home() {
             Explore Data Dashboard
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
-          <button className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-white text-slate-900 border border-slate-200 font-medium hover:bg-slate-50 transition-colors shadow-sm dark:bg-slate-900 dark:text-white dark:border-slate-800 dark:hover:bg-slate-800">
-            <Download className="mr-2 h-4 w-4" />
-            Download TALL_Project_Results.zip
-          </button>
+
+          <a
+            href="/handwritten_notes.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-slate-100 text-slate-900 border border-slate-200 font-medium hover:bg-slate-200 transition-colors shadow-sm dark:bg-slate-800 dark:text-white dark:border-slate-700 dark:hover:bg-slate-700"
+          >
+            <FileText className="mr-2 h-4 w-4" />
+            Handwritten Notes
+          </a>
+          <a
+            href="/report.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-slate-100 text-slate-900 border border-slate-200 font-medium hover:bg-slate-200 transition-colors shadow-sm dark:bg-slate-800 dark:text-white dark:border-slate-700 dark:hover:bg-slate-700"
+          >
+            <BookOpen className="mr-2 h-4 w-4" />
+            Final Report
+          </a>
         </div>
       </section>
 
@@ -73,7 +89,7 @@ export default function Home() {
       {/* Bottom CTA */}
       <section className="mt-16 text-center border-t border-slate-200 dark:border-slate-800 pt-16">
         <p className="text-slate-500">
-          Project Lead: Krish_136 | Institute for Cancer Research
+          Project Lead: Krish_136
         </p>
       </section>
     </div>
